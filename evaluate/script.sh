@@ -1,0 +1,1 @@
+for i in {0..305000..5000}; do rm -rf input/res; mkdir input/res; cp infer${i}_val/*.png input/res/; python evaluate.py input res/output_${i}; done

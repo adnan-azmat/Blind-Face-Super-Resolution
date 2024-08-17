@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -q normal
+#PBS -j oe
+#PBS -l select=1:ncpus=16:mem=25gb:ngpus=4
+#PBS -N train
+#PBS -l walltime=20:59:00
+#PBS -P Personal
+source /home/users/ntu/adnan002/scratch/miniconda3/bin/activate srgan
+cd /home/users/ntu/adnan002/scratch/repos/proacv2/Real-ESRGAN
+./train.sh
